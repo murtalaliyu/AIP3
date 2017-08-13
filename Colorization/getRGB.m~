@@ -1,6 +1,6 @@
 %this function returns a matrix of 3-value vectors
 %representing the r,g,b values of an input image
-function [r,g,b] = getRGB()
+function imageRGBmatrix = getRGB()
 
     prompt = 'What is the file path? ';
     url = input(prompt);
@@ -20,13 +20,10 @@ function [r,g,b] = getRGB()
         end
     end
     
-    %{
     imageRGBmatrix = zeros(x,y);
-    one = [r(1,1) g(1,1) b(1,1)];
     for i=1:x
         for j=1:y
-            imageRGBmatrix(i,j) = one;
+            imageRGBmatrix = [r(i,j), g(i,j) b(i,j)];
         end
     end
-    %}
 end
