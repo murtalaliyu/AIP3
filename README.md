@@ -4,4 +4,4 @@ We are given training data in the form of 9-element vectors corresponding to 3x3
 -To run-
 In the matlab console:
 1. Type "[r,g,b] = getRGB" and press enter.
-2. Follow prompt by entering an image address or path in colons. E.g., "What is the file path? '/Users/Murtala/Desktop/africa.jpg'"
+2. Follow prompt by entering an image address or path in between colons. E.g., "What is the file path? '/Users/Murtala/Desktop/africa.jpg'"
