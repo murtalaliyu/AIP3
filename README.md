@@ -3,5 +3,7 @@ We are given training data in the form of 9-element vectors corresponding to 3x3
 
 -To run-
 In the matlab console:
-1. Type "[r,g,b] = getRGB" and press enter.
-2. Follow prompt by entering an image address or path in between colons. E.g., "What is the file path? '/Users/Murtala/Desktop/africa.jpg'"
+1. Import your input.csv, color.csv and data.csv files into your workspace.
+2. Type [mat,inputSize] = train(input,color). You should get back a matrix 'mat' and integer variable 'inputSize'.
+3. Type newColor = test(data). You should get back a matrix 'newColor'.
+4. Type colorType = repColors(newColor). This will give you back a variable 'colorType' that contains each color prediction per pixel in data.
