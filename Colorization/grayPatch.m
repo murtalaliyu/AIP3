@@ -1,4 +1,4 @@
-%takes an mx9 input and returns an mx3 matrix of rgb values
+%takes an mx9 input and returns an mx1 matrix of color shades
 function [shade] = grayPatch(input)
     [x,~] = size(input);
     shade = zeros(x,1);
