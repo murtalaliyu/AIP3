@@ -7,3 +7,8 @@ In the matlab console:
 2. Type [mat,inputSize] = train(input,color). You should get back a matrix 'mat' and integer variable 'inputSize'.
 3. Type newColor = test(data). You should get back a matrix 'newColor'.
 4. Type colorType = repColors(newColor). This will give you back a variable 'colorType' that contains each color prediction per pixel in data.
+
+-To export colorType to csv:
+1. Type csvwrite('nameoffile.dat',colorType)
+2. Type 'type nameoffile.dat'
+3. Go to your Matlab working directory, nameoffile.dat should be there and can be opened as a text file or spreadsheet.
