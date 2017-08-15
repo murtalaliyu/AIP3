@@ -3,6 +3,7 @@
 function [colorType] = repColors(color)
 
     [x,~] = size(color);
+    colorType = zeros(x,3);
     
     for i=1:x
         
@@ -13,11 +14,17 @@ function [colorType] = repColors(color)
         if abs(r-g) < 20
             if abs(r-b) < 20
                 if (r < 50 && g < 50 && b < 50)
-                    colorType(i,:) = 'BLA';
+                    colorType(i,1) = 'B';
+                    colorType(i,2) = 'L';
+                    colorType(i,3) = 'A';
                 elseif (r > 200 && g > 200 && b > 200)
-                    colorType(i,:) = 'WHI';
+                    colorType(i,1) = 'W';
+                    colorType(i,2) = 'H';
+                    colorType(i,3) = 'I';
                 else
-                    colorType(i,:) = 'GRA';
+                    colorType(i,1) = 'G';
+                    colorType(i,2) = 'R';
+                    colorType(i,3) = 'A';
                 end
             end
         end
@@ -49,44 +56,54 @@ function [colorType] = repColors(color)
         
         if primary == r
             if (primary - secondary) >= 100
-                colorType(i,:) = 'RED';
+                colorType(i,1) = 'R';
+                colorType(i,2) = 'E';
+                colorType(i,3) = 'D';
             else
                 if secondary == b
                     if (b - g) > 40
-                        colorType(i,:) = 'PUR';
+                        colorType(i,1) = 'P';
+                        colorType(i,2) = 'U';
+                        colorType(i,3) = 'R';
                     else 
-                        colorType(i,:) = 'PIN';
+                        colorType(i,1) = 'P';
+                        colorType(i,2) = 'I';
+                        colorType(i,3) = 'N';
                     end
                 else
                     if (g - b) > 150
-                        colorType(i,:) = 'YEL';
+                        colorType(i,1) = 'Y';
+                        colorType(i,2) = 'E';
+                        colorType(i,3) = 'L';
                     else   
-                        colorType(i,:) = 'ORA';
+                        colorType(i,1) = 'O';
+                        colorType(i,2) = 'R';
+                        colorType(i,3) = 'A';
                     end
                 end
             end
         elseif primary == g
             if (primary - secondary) >= 25
-                colorType(i,:) = 'GRE';
+                colorType(i,:) = 05;
             else
                 if secondary == b
-                    colorType(i,:) = 'BLU';
+                    colorType(i,:) = 02;
                 else
-                    colorType(i,:) = 'YEL';
+                    colorType(i,:) = 04;
                 end
             end
         elseif primary == b
             if (primary - secondary) >= 100
-                colorType(i,:) = 'BLU';
+                colorType(i,:) = 02;
             else
                 if secondary == r
                     if (r - g) > 40
-                        colorType(i,:) = 'PUR';
+                        colorType(i,:) = 07;
                     else 
-                        colorType(i,:) = 'IND';
+                        colorType(i,:) = 08;
                     end
                 else
-                    colorType(i,:) = 'BLU';
+                    colorType(i,:) = 02;
                 end
             end
         end

@@ -1,0 +1,35 @@
+function [newColor] = test(data,m,inputSize)
+    [x,~] = size(data);
+    newColor = zeros(x,3);
+    for i=1:x %for each row in data
+        for j=1:inputSize % go through input
+            avg = round(sum(data(i,:))/9);
+            if avg == m(j,1)
+                newColor(i,1) = m(j,3);
+                newColor(i,2) = m(j,4);
+                newColor(i,3) = m(j,5);
+            else 
+                if (avg > 0) && (avg < 50)
+                    newColor(i,1) = ;
+                    newColor(i,2) = ;
+                    newColor(i,3) = ;
+                elseif (avg >= 50) && (avg < 80)
+                    newColor(i,1) = ;
+                    newColor(i,2) = ;
+                    newColor(i,3) = ;
+                elseif (avg >= 80) && (avg < 100)
+                    newColor(i,1) = ;
+                    newColor(i,2) = ;
+                    newColor(i,3) = ;
+                elseif (avg >= 100) && (avg < 120)
+                    newColor(i,1) = ;
+                    newColor(i,2) = ;
+                    newColor(i,3) = ;
+                elseif (avg > 0) && (avg < 50)
+                    
+                end
+            end
+        end
+    end
+end
+

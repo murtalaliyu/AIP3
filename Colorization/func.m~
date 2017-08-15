@@ -1,0 +1,6 @@
+function [] = func(input)
+    color = zeros();
+    for i=1:size(input)
+        
+    end
+end
